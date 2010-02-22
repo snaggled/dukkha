@@ -1,0 +1,58 @@
+#main {
+	width: 900px;
+	height: 600px;
+	background-color: black;
+	left: 50%;
+	top: 50%;
+	margin-top: -300px;
+	margin-left: -450px;
+	position: fixed;
+}
+
+/* for IE */
+* html .centered { position:absolute }
+
+.cell {
+	background: url(http://static01.symbaloo.com/_img/icon_background.gif) no-repeat;
+	height: 80px;
+	width: 80px;
+	opacity: 0.4;
+
+}
+
+* {padding:0; margin:0;}
+
+.inner-text {
+	padding-top: 20px;	
+}
+
+.inner-cell {
+		padding-top: 30px;	
+
+	padding-left: 5px;
+	padding-right: 5px;
+	overflow:hidden;
+	text-align:center;
+	width:70px;
+	font: 11px/96% "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	height: 70px;
+}
+
+.supercell {
+	display: table-cell;
+}
+
+body {
+	background-color: #000;
+}
+#grid {
+	display: table;
+	width: 900px;
+	height: 540px;
+	float: none;
+	position: relative;
+}
+.hgroup {display: table-row;
+	height: 80px;
+	position: relative;
+}

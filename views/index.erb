@@ -1,0 +1,78 @@
+<html>
+<header>
+	<title>dukkha</title>
+	<link rel="stylesheet" type="text/css" href="/css/style.css" /> 
+	<script type="text/javascript" src="http://jquery-ui.googlecode.com/svn/tags/1.7.2/jquery-1.3.2.js"></script>
+	<script type="text/javascript" src="http://jquery-ui.googlecode.com/svn/tags/1.7.2/ui/ui.core.js"></script>
+	<script type="text/javascript" src="http://jquery-ui.googlecode.com/svn/tags/1.7.2/ui/ui.draggable.js"></script>
+</header>
+<body>
+
+
+<div id="main">
+	<div id="grid">
+		<% @cells.each_with_index do |x,i| %>
+			<div class="hgroup">
+				<% x.each_with_index do |y,j| %>
+					<% id = "sq-#{i}-#{j}" %>
+						<div id="<%= id %>-supercell" class="supercell">
+						<div id="<%= id %>" class="cell">
+						<% if y %>
+							
+							<script type="text/javascript">
+							$("#<%= id %>").css('background', "url(<%= y.background %>) no-repeat");	
+								$("#<%= id %>").click(function(){window.location = "<%= y.url %>";});
+								$("#<%= id %>").attr('opacity', '1.0');						
+							</script>
+							<% else %>
+							<script type="text/javascript">
+							
+							$("#<%= id %>").attr('opacity', '0.4');							
+							</script>
+						<% end %>
+						<script type="text/javascript">
+						$("#<%= id %>").css('opacity', $("#<%= id %>").attr('opacity'));							
+						</script>
+							<div id="<%= id %>-inner" class="inner-cell">
+								<% if y && y.image != "" %>
+								
+								<script type="text/javascript">
+									$("#<%= id %>-inner").css('background', "url(<%= y.image %>) no-repeat");	
+								</script>
+								<% end %>
+								<div class="inner-text">
+																<% if y && y.text != "" %>
+																<%= y.text %>
+																<script type="text/javascript">
+
+																$("#<%= id %>-inner").css('color', "<%= y.color %>");	
+																</script>	
+																
+																	<% else %>
+																	<div id="<%= id %>-inner-hidden">"hidden"</div>
+																	<script type="text/javascript">
+																	$("#<%= id %>-inner-hidden").css('opacity', '0');							
+																	</script>
+
+																<% end %></div>
+																
+	
+							</div>
+					</div>
+				</div >
+												
+						<script type="text/javascript">
+						$("#<%= id %>").mouseover(function() {
+							$("#<%= id %>").css('opacity', '0.2');							
+						});
+						$("#<%= id %>").mouseout(function() {
+							$("#<%= id %>").css('opacity', $("#<%= id %>").attr('opacity'));							
+						});	
+						</script>
+				<% end %>
+			</div>
+		<% end %>
+	</div>
+</div>
+</body>
+</html>
