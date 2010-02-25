@@ -1,0 +1,71 @@
+== Introduction
+
+Dukkha is a simple startpage, modelled to look like http://www.symbaloo.com and based on hpricot, sinatra & jQuery. I wanted something that looked like symbaloo and had been dying to play with the awesome Sinatra, which looked perfect. Coupled with hpricot for XML parsing, and jQuery for all-round awesomeness, its a couple of hours work.    
+
+==Configuration
+
+Cells (one of the table elements) are configured in config.xml, it look like this:
+
+	<cell>
+    	<coords><x>5</x><y>1</y></coords>
+    	<image>router.gif</image>
+    	<text>dsl router</text>
+    	<color>#ffffff</color>
+    	<background>blue.gif</background>   
+    	<url>http://192.168.1.1<;/url>
+	</cell>
+
+==Hpricot
+
+Life could not be any easier when we are parsing XML in ruby, so I took the liberty of firstly creating a Cell class to hold what we need:
+
+	class Cell
+  		@@attrs = [:x, :y, :image, :text, :color, :background, :url, :tooltip]
+  		@@attrs.each {|a| attr_accessor a }
+ 
+ 		def initialize(cell)
+    		@@attrs.each do |a|
+      			self.send("#{a}=", (cell/a).inner_html)
+    		end    
+
+    		[:x, :y].each {|a| self.send("#{a}=", self.send(a).to_i)}
+  		end
+	end
+
+Along with a quick XML parsing routine:   
+
+	def load_config(xml_config="#{File.dirname(__FILE__)}/config.xml")
+  		config = File.read(xml_config)
+  		doc = Hpricot.parse(config)
+ 
+  		# cells = multi-d array using width & height
+  		width = (doc/:cells/:width).inner_html.to_i
+  		height = (doc/:cells/:height).inner_html.to_i
+  		cells = Array.new(height)
+  		height.times { |h| cells[h] = Array.new(width) }
+ 
+  		(doc/:cells/:cell).each do |cell_html|
+    		cell = Cell.new(cell_html)
+			cells[cell.y][cell.x] = cell
+  		end
+  		cells 
+	end
+
+And we have our table config’d and loaded.   
+
+==Sinatra
+
+Next up, is the fantastic Sinatra. All we’re really going to do here is load the XML into our multi-dimensional array and delegate the display to the view (as it should be):
+
+	get '/' do
+		@cells = load_config
+		erb :index
+	end    
+
+Finally, all of the Javascript resides in the view.
+
+You will notice I’ve replicated the symbaloo layout and used some of their icons. Credit where credit’s due, their site looks great and I encourage you to head over there and check it out.           
+
+Which leaves us with a name to choose. I settled upon Dukkha because I am reading about Buddhism and was extremely impressed to find it defined the fundamental disquiet we experience as beings, trapped between the assumption of an eternal self (atman) and the denial of such a self (anatman).
+
+Speaking of “having a poor axle hole,”, thats pretty much how I felt when I discovered Internet Explorer didn’t want to play nicely with my XHTML and CSS. Not to matter, as I don’t have the time nor inclination to start fixing things so that IE will play nicely with it. If Microsoft browsers are your thing, I graciously invite you to fork it github and make it look pretty.

@@ -5,67 +5,100 @@
 		<height>6</height>
     	<cell>
 			<coords><x>0</x><y>0</y></coords>
-			<image>http://symbaloo.com/_img/icon/custom/default/194.gif</image>
-			<text>blog</text>
+			<image>http://symbaloo.com/_img/icon/custom/default/191.gif</image>
+			<text>jekyll</text>
 			<color>#ffffff</color>
-			<background>http://static01.symbaloo.com/_img/icon_background_orange.gif</background>
-			<url>http://snaggled.github.com</url>
+			<background>http://static01.symbaloo.com/_img/icon_background_green.gif</background>
+			<url>http://oden:4000</url>
 		</cell>
     	<cell>
 			<coords><x>0</x><y>1</y></coords>
 			<image>http://symbaloo.com/_img/icon/custom/default/191.gif</image>
-			<text>google</text>
+			<text>redmine</text>
 			<color>#ffffff</color>
 			<background>http://static01.symbaloo.com/_img/icon_background_green.gif</background>
-			<url>http://snaggled.github.com</url>
+			<url>http://oden:3002</url>
 		</cell> 
     	<cell>
 			<coords><x>0</x><y>2</y></coords>
-			<image>http://symbaloo.com/_img/icon/custom/default/190.gif</image>
-			<text>google</text>
+			<image>http://symbaloo.com/_img/icon/custom/default/191.gif</image>
+			<text>factotum</text>
 			<color>#ffffff</color>
 			<background>http://static01.symbaloo.com/_img/icon_background_green.gif</background>
-			<url>http://snaggled.github.com</url>
+			<url>http://oden:3001</url>
 		</cell>
     	<cell>
 			<coords><x>0</x><y>3</y></coords>
 			<image>http://symbaloo.com/_img/icon/custom/default/189.gif</image>
-			<text>google</text>
+			<text>sinatra</text>
 			<color>#ffffff</color>
 			<background>http://static01.symbaloo.com/_img/icon_background_green.gif</background>
-			<url>http://snaggled.github.com</url>
+			<url>http://oden:4567</url>
 		</cell>  
+
     	<cell>
-			<coords><x>1</x><y>2</y></coords>
+			<coords><x>0</x><y>4</y></coords>
 			<image>http://symbaloo.com/_img/icon/custom/default/189.gif</image>
-			<text>google</text>
+			<text>default rails</text>
 			<color>#ffffff</color>
 			<background>http://static01.symbaloo.com/_img/icon_background_green.gif</background>
-			<url>http://snaggled.github.com</url>
-		</cell> 
+			<url>http://oden:3000</url>
+		</cell>
     	<cell>
-			<coords><x>2</x><y>3</y></coords>
+			<coords><x>2</x><y>4</y></coords>
 			<image>http://static01.symbaloo.com/_img/icon/search_124.gif</image>
-			<text>google</text>
+			<text>roku</text>
 			<color>#ffffff</color>
 			<background>http://static01.symbaloo.com/_img/icon_background_red.gif</background>
-			<url>http://snaggled.github.com</url>
+			<url>http://192.168.1.102</url>
 		</cell>
     	<cell>
 			<coords><x>3</x><y>4</y></coords>
-			<image>http://symbaloo.com/_img/icon/custom/default/252.gif</image>
-			<text>google</text>
+			<image>http://symbaloo.com/_img/icon/custom/default/253.gif</image>
+			<text>ps3media</text>
 			<color>#ffffff</color>
 			<background>http://static01.symbaloo.com/_img/icon_background_purple.gif</background>
-			<url>http://snaggled.github.com</url>
-		</cell>
+			<url>http://oden:5001/console/home</url>
+		</cell>     
     	<cell>
-			<coords><x>4</x><y>5</y></coords>
-			<image>http://static01.symbaloo.com/_img/icon/link_556.gif</image>
+			<coords><x>9</x><y>3</y></coords>
+			<image>http://static01.symbaloo.com/_img/icon/link_298.gif</image>
 			<text></text>
 			<color>#000000</color>
 			<background>http://static01.symbaloo.com/_img/icon_background_white.gif</background>
-			<url>http://facebook.com</url>
+			<url>http://flickr.com</url>
+		</cell>
+    	<cell>
+			<coords><x>9</x><y>4</y></coords>
+			<image>http://static01.symbaloo.com/_img/icon/link_593.gif</image>
+			<text></text>
+			<color>#000000</color>
+			<background>http://static01.symbaloo.com/_img/icon_background_white.gif</background>
+			<url>http://youtube.com</url>
+		</cell>        
+    	<cell>
+			<coords><x>5</x><y>1</y></coords>
+			<image>http://static01.symbaloo.com/_img/icon/search_122.gif</image>
+			<text>dsl router</text>
+			<color>#ffffff</color>
+			<background>http://static01.symbaloo.com/_img/icon_background_blue.gif</background>
+			<url>http://192.168.1.1</url>
+		</cell>
+    	<cell>
+			<coords><x>5</x><y>2</y></coords>
+			<image>http://static01.symbaloo.com/_img/icon/search_121.gif</image>
+			<text>switch</text>
+			<color>#ffffff</color>
+			<background>http://static01.symbaloo.com/_img/icon_background_blue.gif</background>
+			<url>http://192.168.1.3</url>
+		</cell> 
+    	<cell>
+			<coords><x>5</x><y>3</y></coords>
+			<image>http://static01.symbaloo.com/_img/icon/search_121.gif</image>
+			<text>access point</text>
+			<color>#ffffff</color>
+			<background>http://static01.symbaloo.com/_img/icon_background_blue.gif</background>
+			<url>http://192.168.1.10</url>
 		</cell>
 	</cells>
 </oxo_config>

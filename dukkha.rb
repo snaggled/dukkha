@@ -14,6 +14,7 @@ class Cell
   end
 end
 
+# cells is a multi-dimensional array [[1,2,3,4,5,6], [1,2,3,4,5,6] ...]
 def load_config(xml_config="#{File.dirname(__FILE__)}/config.xml")
   config = File.read(xml_config)
   doc = Hpricot.parse(config)
@@ -31,6 +32,7 @@ def load_config(xml_config="#{File.dirname(__FILE__)}/config.xml")
   cells  
 end
 
+# one url, load the config each time
 get '/' do
   @cells = load_config
   erb :index
