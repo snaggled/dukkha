@@ -68,4 +68,4 @@ You will notice I’ve replicated the symbaloo layout and used some of their ico
 
 Which leaves us with a name to choose. I settled upon Dukkha because I am reading about Buddhism and was extremely impressed to find it defined the fundamental disquiet we experience as beings, trapped between the assumption of an eternal self (atman) and the denial of such a self (anatman).
 
-Speaking of “having a poor axle hole,”, thats pretty much how I felt when I discovered Internet Explorer didn’t want to play nicely with my XHTML and CSS. Not to matter, as I don’t have the time nor inclination to start fixing things so that IE will play nicely with it. If Microsoft browsers are your thing, I graciously invite you to fork it github and make it look pretty.
+Speaking of “having a poor axle hole,”, thats pretty much how I felt when I discovered Internet Explorer didn’t want to play nicely with my XHTML and CSS. Not to matter, as I don’t have the time nor inclination to start fixing things so that IE will play nicely with it. If Microsoft browsers are your thing, I graciously invite you to fork it and make it look pretty.         
